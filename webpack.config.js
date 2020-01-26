@@ -30,8 +30,8 @@ module.exports = (env, argv) => {
 
         // entry files to compile (relative to the base dir)
         entry: [
-            "/js/app.js",
-            "/scss/app.scss",
+            "./js/app.js",
+            "./scss/app.scss",
         ],
 
         // enable development source maps
@@ -41,11 +41,11 @@ module.exports = (env, argv) => {
         // path to store compiled JS bundle
         output: {
             // bundle relative name
-            filename: "/js/app.js",
+            filename: "js/app.js",
             // base build directory
             path: path.resolve(__dirname, "dist"),
             // path to build relative asset links
-            publicPath: "/"
+            publicPath: "../"
         },
 
         // plugins configurations
