@@ -1,0 +1,16 @@
+
+
+html,
+body,
+header,
+.jarallax {
+  height: 100%;
+}
+@media (min-width: 560px) and (max-width: 740px) {
+  html,
+  body,
+  header,
+  .jarallax {
+    height: 600px;
+  }
+}

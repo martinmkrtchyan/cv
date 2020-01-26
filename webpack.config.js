@@ -32,6 +32,7 @@ module.exports = (env, argv) => {
         entry: [
             "./js/app.js",
             "./scss/app.scss",
+            'font-awesome/scss/font-awesome.scss',
         ],
 
         // enable development source maps
@@ -45,7 +46,7 @@ module.exports = (env, argv) => {
             // base build directory
             path: path.resolve(__dirname, "dist"),
             // path to build relative asset links
-            publicPath: "../cv/"
+            publicPath: "../"
         },
 
         // plugins configurations
@@ -100,6 +101,14 @@ module.exports = (env, argv) => {
                         "css-loader",
                         "sass-loader"
                     ],
+                },
+
+                {
+                    test: /font-awesome\.config\.js/,
+                    use: [
+                        { loader: 'style-loader' },
+                        { loader: 'font-awesome-loader' }
+                    ]
                 },
 
                 // images loader
